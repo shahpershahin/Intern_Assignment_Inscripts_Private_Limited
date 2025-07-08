@@ -1,0 +1,49 @@
+/* src/index.css */
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Apply a global font and background color */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F9FAFB; /* Use the background color defined in tailwind.config.js */
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Ensure the root element takes full height */
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Custom styles for the spreadsheet cells to ensure proper alignment and appearance */
+.spreadsheet-cell {
+  @apply p-2 border-r border-b border-border text-sm text-text-dark flex items-center;
+  min-width: 120px; /* Minimum width for cells */
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide overflow content */
+  text-overflow: ellipsis; /* Show ellipsis for overflow */
+}
+
+.spreadsheet-header-cell {
+  @apply p-2 border-r border-b border-border bg-gray-50 text-xs font-semibold text-text-light uppercase tracking-wider flex items-center;
+  min-width: 120px; /* Minimum width for header cells */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Style for the active cell to give it a distinct border */
+.active-cell {
+  @apply border-2 border-blue-500; /* Blue border for active cell */
+}
+
+/* Style for selected cells */
+.selected-cell {
+  @apply bg-blue-100; /* Light blue background for selected cells */
+}
+
