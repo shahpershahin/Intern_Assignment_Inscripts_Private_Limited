@@ -1,5 +1,4 @@
 // src/App.tsx
-import React from 'react';
 import Header from '../src/assets/components/Header';
 import Toolbar from '../src/assets/components/Toolbar';
 import Spreadsheet from '../src/assets/components/Spreadsheet';
